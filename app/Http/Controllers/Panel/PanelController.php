@@ -45,12 +45,4 @@ class PanelController extends Controller
             return back()->with('error', $ex);
         }
     }
-
-    /**
-     * @return Application|Factory|View
-     */
-    public function profile()
-    {
-        return view('panel.profile');
-    }
 }

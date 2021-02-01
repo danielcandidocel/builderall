@@ -31,8 +31,9 @@
                         <span>{{$data['countAll']}}</span>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Clientes</h5>
-                        <p class="card-text">Atualmente você possui {{$data['countAll']}} Cliente(s) Cadastrado(s).</p>
+                        <h5 class="card-title">Clientes Cadastrados</h5>
+                        <p class="card-text">Atualmente você possui <bold>{{$data['countAll']}}</bold>
+                            Cliente(s) Cadastrado(s).</p>
                         <a href="{{ route('customers.create') }}" class="btn btn-success">Adiconar Cliente</a>
                     </div>
                 </div>
@@ -41,8 +42,9 @@
                         <span>{{$data['countActive']}}</span>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Clientes</h5>
-                        <p class="card-text">Atualmente você possui {{$data['countActive']}} Cliente(s) Ativo(s).</p>
+                        <h5 class="card-title">Clientes Ativos</h5>
+                        <p class="card-text">Atualmente você possui <bold>{{$data['countActive']}}</bold>
+                            Cliente(s) Ativo(s).</p>
                         <a href="{{ route('customers.create') }}" class="btn btn-success">Adiconar Cliente</a>
                     </div>
                 </div>
@@ -51,9 +53,9 @@
                         <span>{{$data['countTrashed']}}</span>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Clientes</h5>
-                        <p class="card-text">Atualmente você possui {{$data['countTrashed']}} Cliente(s) Excluído(s)
-                            .</p>
+                        <h5 class="card-title">Clientes Excluídos</h5>
+                        <p class="card-text">Atualmente você possui<bold>{{$data['countTrashed']}}</bold>
+                            Cliente(s) Excluído(s)s.</p>
                         <a href="{{ route('customers.create') }}" class="btn btn-success">Adiconar Cliente</a>
                     </div>
                 </div>

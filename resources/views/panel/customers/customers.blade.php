@@ -71,7 +71,7 @@
                 <div class="d-flex justify-content-end mb-3">
                     <small><a href="{{ route('customers.index') }}">Limpar Filtros</a></small>
                 </div>
-                @if ($customers)
+                @if (count($customers) > 0)
                     <div class="table-responsive">
                         <table class="table table-hover table-striped table-bordered mb-md-4" id="tableCustomers">
                             <thead>

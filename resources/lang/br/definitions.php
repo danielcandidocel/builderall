@@ -21,5 +21,10 @@ return [
         'profile'           => 'perfil',
         'customers'         => 'clientes',
         'customers/create'  => 'clientes/criar'
-    ]
+    ],
+    'user'      => [
+        'update'            => [
+            'success'           => 'Atualizado com Sucesso'
+        ]
+]
 ];

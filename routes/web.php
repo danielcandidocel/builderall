@@ -28,10 +28,14 @@ Route::group(
     function() {
         App::setLocale('br');
         Route::get(__('definitions.routes.panel'), 'PanelController@index')->name('panel');
-        Route::get(__('definitions.routes.profile'), 'PanelController@profile')->name('profile');
+
         Route::get('customers/search', 'CustomersController@search')->name('customers.search');
         Route::resource(__('definitions.routes.customers'), 'CustomersController')->names('customers');
+
         Route::post('city/search', 'CityController@search')->name('cities.search');
+
+        Route::get(__('definitions.routes.profile'), 'ProfileController@index')->name('profile');
+        Route::put('profile/{user}', 'ProfileController@update')->name('profile.update');
     }
 
 );
