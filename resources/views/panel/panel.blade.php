@@ -54,7 +54,7 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Clientes Excluídos</h5>
-                        <p class="card-text">Atualmente você possui<bold>{{$data['countTrashed']}}</bold>
+                        <p class="card-text">Atualmente você possui <bold>{{$data['countTrashed']}}</bold>
                             Cliente(s) Excluído(s)s.</p>
                         <a href="{{ route('customers.create') }}" class="btn btn-success">Adiconar Cliente</a>
                     </div>

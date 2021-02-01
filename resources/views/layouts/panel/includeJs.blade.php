@@ -75,6 +75,7 @@
                     }
                     $('#city').html(html);
                     $('#city').removeAttr('readonly');
+                    $('#city').removeAttr('disabled');
                 },
                 error: function (data) {
                     $('#city').attr('readonly', 'readonly');

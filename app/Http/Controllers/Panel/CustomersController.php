@@ -52,7 +52,7 @@ class CustomersController extends Controller
      */
     public function index()
     {
-        $customers  = $this->customer->with(['city.state'])->paginate(2);
+        $customers  = $this->customer->query()->orderBy('name', 'asc')->with(['city.state'])->paginate(2);
         $cities     = $this->city->query()->orderBy('name', 'asc')->get();
         $states     = $this->state->query()->orderBy('name', 'asc')->get();
 

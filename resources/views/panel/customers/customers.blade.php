@@ -50,7 +50,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Cidade:</div>
                             </div>
-                            <select name="city" class="form-control custom-select brr" id='city' size='0' readonly>
+                            <select name="city" class="form-control custom-select brr" id='city' size='0' disabled>
                                 <option value="">Todos</option>
                                 @foreach($cities as $city)--}}
                                 <option value="{{ $city->id }}" @if(isset($filters['city'])
@@ -77,8 +77,8 @@
                             <thead>
                             <tr>
                                 <th class="text-center">Nome</th>
-                                <th class="text-center">Cidade</th>
                                 <th class="text-center">Estado</th>
+                                <th class="text-center">Cidade</th>
                                 <th class="text-center">Ações</th>
                             </tr>
                             </thead>
@@ -89,10 +89,10 @@
                                         {{ $customer->name }}
                                     </td>
                                     <td class="text-center align-middle">
-                                        {{ $customer->city->name }}
+                                        {{ $customer->city->state->name }}
                                     </td>
                                     <td class="text-center align-middle">
-                                        {{ $customer->city->state->name }}
+                                        {{ $customer->city->name }}
                                     </td>
                                     <td class="text-center align-middle">
                                         <a href="{{ route('customers.edit', $customer->id) }}" class="text-black-50">
