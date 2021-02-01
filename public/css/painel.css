@@ -1,0 +1,64 @@
+body, body .table {
+    margin: 0;
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 400;
+    line-height: 1.25;
+    color: #23282C;
+    text-align: left;
+    font-size: 14px;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+.table td, .table th {
+    white-space: nowrap;
+}
+.table-sm th, .table-sm td {
+    padding: .5rem;
+}
+.pointer {
+    cursor: pointer;
+}
+
+@-webkit-keyframes color_change {
+    from { background-color: #28A745; }
+    to { background-color: rgba(40, 167, 69, 0.8); }
+}
+@-moz-keyframes color_change {
+    from { background-color: #28A745; }
+    to { background-color: rgba(40, 167, 69, 0.8);; }
+}
+@-ms-keyframes color_change {
+    from { background-color: #28A745; }
+    to { background-color: rgba(40, 167, 69, 0.8);; }
+}
+@-o-keyframes color_change {
+    from { background-color: #28A745; }
+    to { background-color: rgba(40, 167, 69, 0.8);; }
+}
+@keyframes color_change {
+    from { background-color: #28A745; }
+    to { background-color: rgba(40, 167, 69, 0.8);; }
+}
+
+.downloadFile {
+    -webkit-animation: color_change 0.5s infinite alternate;
+    -moz-animation: color_change 0.5s infinite alternate;
+    -ms-animation: color_change 0.5s infinite alternate;
+    -o-animation: color_change 0.5s infinite alternate;
+    animation: color_change 0.5s infinite alternate;
+    color: white;
+}
+
+.font-size-small{
+    font-size: small;
+}
+.font-size-large{
+    font-size: large;
+}
+.background-color-1{
+    background-color: rgba(247, 247, 247, 0.6);
+}
