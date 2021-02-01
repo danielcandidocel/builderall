@@ -58,18 +58,23 @@ class ProfileController extends Controller
     {
         try {
             $data               = $request->only('name', 'password', 'email', 'password_confirmation');
+            $user = $this->users->query()->find($id);
             $rulesPassword      = '';
             if (isset($data['password']) && !empty($data['password'])) {
                 $rulesPassword  = "required|string|min:6|confirmed";
+                $user->password = Hash::make($data['password']);
             }
+
             if($data['email'] != Auth::user()->email){
                 $rulesEmail     = "required|string|max:255|email|unique:users";
             } else {
                 $rulesEmail     = "required|string|max:255|email";
             }
+
             if (isset($data['email']) && !empty($data['password'])) {
                 $rulesPassword = "required|string|min:6|confirmed";
             }
+
             $rules      = [
                 "name"              => "required|string|max:255",
                 "email"             => $rulesEmail,
@@ -88,11 +93,9 @@ class ProfileController extends Controller
                 return redirect()->back()->withErrors($validator)->withInput()->exceptInput('password');
             }
 
-            $user = $this->users->query()->find($id);
             if ($user) {
                 $user->name     = $data['name'];
                 $user->email    = $data['email'];
-                $user->password = Hash::make($data['password']);
                 $user->save();
             }
 
